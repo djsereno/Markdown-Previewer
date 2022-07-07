@@ -14,26 +14,14 @@
     <main>
       <div id="editor-container">
         <h1>Editor</h1>
-        <textarea id="markdown-input" rows="4" cols="100">
-# Welcome to my React Markdown Previewer!
-## This is a sub-heading...
-### And here's some other cool stuff:
-
-Heres some code, `<div></div>`, between 2 backticks.
-
-```
-// this is multi-line code:
-
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '```' && lastLine == '```') {
-    return multiLineCode;
-  }
-}
-```
-          </textarea
-        >
+        <textarea
+          id="markdown-input"
+          rows="4"
+          cols="100"
+          oninput="updatePreview();"
+        ></textarea>
       </div>
-      <div id="previewer-container">
+      <div id="preview-container">
         <h1>Previewer</h1>
         <div id="markdown-preview"></div>
       </div>
