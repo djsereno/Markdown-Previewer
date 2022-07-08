@@ -1,5 +1,4 @@
-const placeholder = `
-# Welcome to my React Markdown Previewer!
+const placeholder = `# Welcome to my React Markdown Previewer!
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
@@ -43,14 +42,21 @@ And here. | Okay. | I think we get it.
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 `;
 
+const markdownInputId = '#markdown-input';
+const markdownPreviewId = '#markdown-preview';
+
 $(document).ready(function () {
-  let markdownInput = $("#markdown-input").html();
+  let markdownInput = $(markdownInputId).val();
   if (!markdownInput) {
-    $("#markdown-preview").html(placeholder);
+    markdownInput = placeholder;
+    $(markdownInputId).val(placeholder);
   }
+
+  $(markdownPreviewId).html(markdownInput);
+
 });
 
 function updatePreview() {
-  let markdownInput = $("#markdown-input").html();
-  $("#markdown-preview").html(markdownInput);
+  let markdownInput = $(markdownInputId).val();
+  $(markdownPreviewId).html(markdownInput);
 }
