@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /*   COLORS */
+  --color-background: #6c7785;
+  --color-titlebar: #4f698a;
+  --color-window-background: #98b3d6;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--color-titlebar);
+  border: 1px solid black;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+i {
+  font-size: 2rem;
+}
+
+i:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: max-content;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#markdown-input {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-top: 0px;
+  resize: vertical;
+  background-color: var(--color-window-background);
+}
+
+#markdown-input:focus {
+  outline: none;
+}
+
+#preview-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 80%;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#markdown-preview {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-top: 0px;
+  resize: vertical;
+  background-color: var(--color-window-background);
+}

@@ -51,9 +51,7 @@ $(document).ready(function () {
     markdownInput = placeholder;
     $(markdownInputId).val(placeholder);
   }
-
   $(markdownPreviewId).html(markdownInput);
-
 });
 
 function updatePreview() {
